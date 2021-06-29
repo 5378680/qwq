@@ -237,6 +237,24 @@ if(keys[keys.length-10]==38 && keys[keys.length-9]==38 && keys[keys.length-8]==4
   <!-- 底欄結束 -->
     
   
+       <!-- 向下按鈕 -->
+    <button type="button" id="BackTop" class="toTop-arrow"></button>
+  <script>
+  $(function(){
+  	$('#BackTop').click(function(){ 
+  		$('html,body').animate({scrollTop:0}, 333);
+	  });
+	  $(window).scroll(function() {
+		  if ( $(this).scrollTop() > 300 ){
+			  $('#BackTop').fadeIn(222);
+	  	} else {
+		  	$('#BackTop').stop().fadeOut(222);
+  		}
+  	}).scroll();
+  });
+  </script>
+  
+  
   
 </body>
 
